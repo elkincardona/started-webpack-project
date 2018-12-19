@@ -1,6 +1,10 @@
   import _ from 'lodash';
   import './style.css';
   import printMe from './print.js';
+  import {ElkinComponent} from './elkin.component.js'
+  import mrp from './modulerevelator.js'
+  import namespaces from './objectClass.js';
+  import classjs from './jsClass'
   // import Icon from './icon.png';
 
   function component() {
@@ -14,6 +18,23 @@
 
     element.appendChild(btn);
 
+
+    ElkinComponent.staticMethod();
+
+    let myAccount = new ElkinComponent('Elkin Cardona');
+    myAccount.showName;
+    myAccount.realMethod();
+
+
+    alert(mrp.name());
+
+
+    namespaces.setName('Elkin Cardona');
+    namespaces.getName();
+
+
+    var testObj= new classjs('Elkin', 'Cardona');
+    testObj.getName();
 
        // Add the image to our existing div.
   //  var myIcon = new Image();
